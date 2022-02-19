@@ -22,6 +22,8 @@ $ cd app
 ```sh
 $ composer install
 
+php artisan key:generate
+
 # Migrate each module individually as needed
 $ php artisan module:migrate Company
 $ php artisan module:migrate Users
