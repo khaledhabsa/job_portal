@@ -104,13 +104,14 @@ class jobsTest extends TestCase
 
         $user = User::factory()->create();
         Passport::actingAs(
-            User::factory()->create([
-                'name' => Str::random(10),
-                'email' => Str::random(10).'@gmail.com',
-                'email_verified_at' => now(),
-                'password' => bcrypt('secret'), // password
-                'remember_token' => Str::random(10),
-                'user_type' => $user_type
+            User::factory()->create(
+                [
+                    'name' => Str::random(10),
+                    'email' => Str::random(10) . '@gmail.com',
+                    'email_verified_at' => now(),
+                    'password' => bcrypt('secret'), // password
+                    'remember_token' => Str::random(10),
+                    'user_type' => $user_type
                 ]
             ),
             ['api']
@@ -153,7 +154,7 @@ class jobsTest extends TestCase
     }
 
 
-        /**
+    /**
      * /List all jobs of regular employee unit test.
      *
      * @return void
@@ -164,13 +165,14 @@ class jobsTest extends TestCase
 
         $user = User::factory()->create();
         Passport::actingAs(
-            User::factory()->create([
-                'name' => Str::random(10),
-                'email' => Str::random(10).'@gmail.com',
-                'email_verified_at' => now(),
-                'password' => bcrypt('secret'), // password
-                'remember_token' => Str::random(10),
-                'user_type' => $user_type
+            User::factory()->create(
+                [
+                    'name' => Str::random(10),
+                    'email' => Str::random(10) . '@gmail.com',
+                    'email_verified_at' => now(),
+                    'password' => bcrypt('secret'), // password
+                    'remember_token' => Str::random(10),
+                    'user_type' => $user_type
                 ]
             ),
             ['api']
@@ -192,23 +194,47 @@ class jobsTest extends TestCase
 
         $this->json('GET', 'api/jobs', ['Accept' => 'application/json'])
             ->assertStatus(200)
-            ->assertJson([
+            ->assertJsonFragment([
                 "success" => true,
                 // "message" => [
                 //     [
-                //         "user_id" => 1,
+                //         "id" => 1,
                 //         "title" => "title",
-                //         "description" => "description",
                 //         "status" => "pending",
+                //         "description" => "description",
                 //     ],
                 //     [
-                //         "user_id" => 1,
+                //         "id" => 1,
                 //         "title" => "title",
-                //         "description" => "description",
                 //         "status" => "pending",
+                //         "description" => "description",
                 //     ]
                 // ],
                 "code" => 200
+            ]);
+    }
+
+    public function testRequiredFieldsForJobPost()
+    {
+        $user = User::factory()->create();
+        Passport::actingAs(
+            User::factory()->create(),
+            ['api']
+        );
+        $job_data = [
+            "title" => "",
+            "description" => "",
+            "status" => "pending",
+        ];
+
+        $this->json('POST', 'api/jobs', $job_data, ['Accept' => 'application/json'])
+            ->assertStatus(422)
+            ->assertJson([
+                "message" => "The title field is required. (and 1 more error)",
+                "errors" => [
+                    "title" => ["The title field is required."],
+                    "description" => ["The description field is required."],
+                ]
             ]);
     }
 }
