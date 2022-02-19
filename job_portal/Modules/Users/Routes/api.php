@@ -24,14 +24,6 @@ Route::middleware(['localization'])->group(function() {
             });
 
             Route::get('logout', [AuthController::class, 'logout']);
-            Route::get('get-profile', [UsersController::class, 'getProfile']);
-            Route::post('set-profile', [UsersController::class, 'updateProfile']);
-
-            Route::group(['prefix' => 'profile'], function () {
-                Route::post('update-image', [UsersController::class, 'updateProfileImage']);
-                Route::post('update-email', [UsersController::class, 'updateProfileEmail']);
-                Route::post('update-name', [UsersController::class, 'updateProfileName']);
-            });
 
             Route::prefix('roles')->group(function() {
                 Route::get('/', [RoleController::class, 'index'])->middleware(['permission:roles.show'])->name('roles.api.index');

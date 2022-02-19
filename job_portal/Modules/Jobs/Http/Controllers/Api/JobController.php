@@ -22,16 +22,15 @@ class JobController extends Controller
         if($user_type == 'regular'){
             $jobs = Job::where('user_id', auth()->user()->id)->get();
         }else{
+            $company_id = auth()->user()->company_id;
             $jobs = DB::table('jobs')
             ->join('users', 'users.id', '=', 'jobs.user_id')
-            ->where('users.company_id', '=', auth()->user()->company_id)
+            // company_id is fixed to be 1 for every user.
+            ->where('users.company_id', '=', 1)
             ->select('jobs.id','jobs.title','jobs.status', 'jobs.description')
             ->get();
 
         }
-        // echo(auth()->user()->company_id);
-        // echo(auth()->user()->id);
-        // exit;
         return sendResponse(true, $jobs);
     }
 

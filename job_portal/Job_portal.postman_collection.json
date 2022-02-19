@@ -47,7 +47,7 @@
 					"response": []
 				},
 				{
-					"name": "Employee Signup",
+					"name": "Employee Signup - Need Autharization",
 					"request": {
 						"method": "POST",
 						"header": [],
@@ -222,7 +222,7 @@
 		"bearer": [
 			{
 				"key": "token",
-				"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiZjUyOGFiYWU2ZTMwMDVlMTljNjJlYjNiZjljMWMyNDE2MzI0NTlmN2YyYmU1MDRkNzhiNzk5NTMwNWRhZjgyMGI2ZTRjNThkMjNjYTk4MDEiLCJpYXQiOjE2NDUyMTYxODAuNDQyOTIxLCJuYmYiOjE2NDUyMTYxODAuNDQyOTI0LCJleHAiOjE2NzY3NTIxODAuNDM0NzA5LCJzdWIiOiIyIiwic2NvcGVzIjpbXX0.Sld8MXq089hSznDB6SumMU_RFpLEwuZsd989y9wTp74jxpsI6YBF9jm27b8LmiiS9YTucs8uvJUY-QisaHhuHtbUygHs7Ntoi8N1OrD4GUR_sL1Yy4RN4Eopb2HvC155IlltIUy7pZLf0YllRzHgl5sx1BoB4iyHlfvJl7bJg8_ip6XAJHnUarIrtT0S4fr7A9ZvdBDUKKJ9vq21dR4w4aYwe6SSLalbD5Bu9818yfKRrfw5fL32ji-LxEMW45lUkgx1U_UHvueOmX3vMkyUYk7G3vHx0O-Fi2t7j3tSdTywEHXmShMwJEech4aofMlc-gIx1WQPDK46CE2GmtNiFcHY_B40Duj9rkDdQGKCYWWBTrVzEei_0UZqRpW2tqEDgF94A-cjTYqFxdaQSDMRFkTLudJbob4P0mtynkGkZCt0ivjezw68SV0_osGSaXrkAwqyLK2bo-zaZdyVS62KufmwOWU7NVvn6jinltB1eDDkiUD_z7fjjKKerXi6hUVMIZL_ydAj6x9xTABq7pnBrdEg5b-C3eyoJDxQBbeulXDd3RLqFBouATwkx-atZANeangWXR8wAXynDWUipPMJt0G8qh177CEE2Gs5jaj5lUKRCOOiBJX8GGH9qoZ9mKJkjOEq_Lrb4DrYgUDqZ5YZ0WluG_fVJn8MKLTy232tS8g",
+				"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiY2E1OWNkOWIwNGFiOWM5ZDQxMjc2ZDgyMGJkNzc5M2U5YjQ1ZDAzOTI4OWJlMDFiZmIwYWM1MjgyMzFlZGIyZTIwYjMwMDJlZWQxMWFhMTIiLCJpYXQiOjE2NDUyODg0NTcuOTA3MDI3LCJuYmYiOjE2NDUyODg0NTcuOTA3MDI5LCJleHAiOjE2NzY4MjQ0NTcuODk5NzM1LCJzdWIiOiIzIiwic2NvcGVzIjpbXX0.rRbxuXKF-1s3h1tmgSnA6hqfPdZrLxcYrKODNUuamNj9oCLW4i8B5R6_Su0whMXLXpDVO4NOCLltXlYSD9PmsRnlhJ4GKTG_l_KPhOyIEiexw0uPcHm8J6Zk9JAKKDhsIM8rNZD7R8FRilvLI05djK3CQk1ufeZd-_nJvfDDphHCPLyg-aV9_v9U6hU_FHTE2I_2bZkxd9IJtWoRADyzPxtUqj45ZbWd9JT6ztGT0VuSFENnFdUmNXE5kIGukncUidLVW6kY_bkGflkIIQQiMZC7VZFVBbgKRaewQgA6jX3zmw9OWCdQ26WrwFTpSIAhuTTmZ0zuvo5B9Es4t9mnksDIGnfS-XQefVnt8u0s8uGM8dtypMvjl3UF5P-jDXr4Kt9p95qAm9ylq4Ya7o6hN60BeoGVrJDrEnhOsZqdoKBTM9WgpmDBA7oIkD9Gd2Lly1HRaym8NS_QVLn4Ge6xLypnz5ZQjT-XiGynfH27awDVNgYArw1eGD9881ks_Eu-doVQPd1FLpSD-RezOTbjZ3M7smQ39vI_oK0m6lFsa0zU5IjnoD8PCrRQ4xYGPxeG3fMdBK99awvxhqGl4G6IDSZNoPIn2BeCc7sCWD02-EFUxxrB1Z-eak_UuGJx2KzfQaQMrcnocz9USk2v6r9nXmc3Ni-OuGDBmmKCLUX0Mv0",
 				"type": "string"
 			}
 		]
@@ -251,6 +251,10 @@
 		{
 			"key": "url",
 			"value": "http://127.0.0.1:8000"
+		},
+		{
+			"key": "url2",
+			"value": "https://api.app.readtolead.info"
 		}
 	]
 }
