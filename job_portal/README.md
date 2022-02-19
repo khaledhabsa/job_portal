@@ -31,7 +31,7 @@ $ php artisan module:migrate Jobs
 $ php artisan migrate
 
 # Seed DB with test data 
-$ php artisan db:seed
+$ php artisan module:seed
 
 # Also you can seed each module individually as needed 
 $ php artisan module:seed module_name
