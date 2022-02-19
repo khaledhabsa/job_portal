@@ -102,7 +102,7 @@ Modules/
 
 **System Classes:**
 There are three primary objects: User, Entity (e.g. company, notifications.), and Job
-![alt text](http://url/to/img.png)
+![alt text](https://github.com/khaledhabsa/job_portal/blob/main/job_portal/entities.jpeg)
 
 
 **System Classes:**
