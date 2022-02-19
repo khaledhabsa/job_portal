@@ -42,4 +42,4 @@ Following short description for high level design of component, we will build/us
 2) Between Web servers and Application/registration servers.     
 Initially, a simple Round Robin approach can be adopted.
 
-![alt text](http://url/to/img.png)
+![alt text](https://github.com/khaledhabsa/job_portal/blob/main/system_design_architecture.png)
