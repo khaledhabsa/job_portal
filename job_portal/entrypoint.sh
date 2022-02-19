@@ -7,7 +7,7 @@ php artisan module:migrate Users
 php artisan module:migrate Jobs
 
 # Seed DB with test data 
-php artisan db:seed
+php artisan module:seed
 
 php artisan optimize
 
