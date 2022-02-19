@@ -94,11 +94,7 @@ class UsersDatabaseSeeder extends Seeder
             ['role_id' => 2, 'permission_id' => 17],['role_id' => 2, 'permission_id' => 18],
             ['role_id' => 2, 'permission_id' => 19],['role_id' => 2, 'permission_id' => 20],
             ['role_id' => 2, 'permission_id' => 21],['role_id' => 2, 'permission_id' => 22],
-            ['role_id' => 2, 'permission_id' => 23],['role_id' => 2, 'permission_id' => 24],
-            ['role_id' => 1, 'permission_id' => 25],['role_id' => 1, 'permission_id' => 26],
-            ['role_id' => 1, 'permission_id' => 27],['role_id' => 1, 'permission_id' => 28],
-            ['role_id' => 2, 'permission_id' => 29],['role_id' => 2, 'permission_id' => 30],
-            ['role_id' => 2, 'permission_id' => 31],['role_id' => 2, 'permission_id' => 32],
+            ['role_id' => 2, 'permission_id' => 23],['role_id' => 2, 'permission_id' => 24]
         ]);
     }
 }

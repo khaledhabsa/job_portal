@@ -29,6 +29,9 @@ class JobController extends Controller
             ->get();
 
         }
+        // echo(auth()->user()->company_id);
+        // echo(auth()->user()->id);
+        // exit;
         return sendResponse(true, $jobs);
     }
 
