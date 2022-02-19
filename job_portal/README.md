@@ -108,6 +108,12 @@ There are three primary objects: User, Entity (e.g. company, notifications.), an
 **System Classes:**
 
 
+## APIs##
+*Login Module*
+Apis attached in postman file
+*Job Module*
+Apis attached in postman file
+
 ## Run test cases:
 ```sh
 # Run all test cases of system module.

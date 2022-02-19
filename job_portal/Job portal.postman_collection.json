@@ -1,0 +1,256 @@
+{
+	"info": {
+		"_postman_id": "0e403c0c-7f19-480e-a1ba-944c8743f2ab",
+		"name": "Job portal",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "Manager Signup",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "manager@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "12345678",
+									"type": "text"
+								},
+								{
+									"key": "name",
+									"value": "manager",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/api/company-register",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"company-register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Employee Signup",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "regular_employee@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "12345678",
+									"type": "text"
+								},
+								{
+									"key": "name",
+									"value": "regular employee",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/api/employee-signup",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"employee-signup"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "company@mail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "password",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/login",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Job",
+			"item": [
+				{
+					"name": "Add job",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "title",
+									"value": "software engineer",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "Php software engineer",
+									"type": "text"
+								},
+								{
+									"key": "status",
+									"value": "pending",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/api/jobs",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"jobs"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "List jobs",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{url}}/api/jobs",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"jobs"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiZjUyOGFiYWU2ZTMwMDVlMTljNjJlYjNiZjljMWMyNDE2MzI0NTlmN2YyYmU1MDRkNzhiNzk5NTMwNWRhZjgyMGI2ZTRjNThkMjNjYTk4MDEiLCJpYXQiOjE2NDUyMTYxODAuNDQyOTIxLCJuYmYiOjE2NDUyMTYxODAuNDQyOTI0LCJleHAiOjE2NzY3NTIxODAuNDM0NzA5LCJzdWIiOiIyIiwic2NvcGVzIjpbXX0.Sld8MXq089hSznDB6SumMU_RFpLEwuZsd989y9wTp74jxpsI6YBF9jm27b8LmiiS9YTucs8uvJUY-QisaHhuHtbUygHs7Ntoi8N1OrD4GUR_sL1Yy4RN4Eopb2HvC155IlltIUy7pZLf0YllRzHgl5sx1BoB4iyHlfvJl7bJg8_ip6XAJHnUarIrtT0S4fr7A9ZvdBDUKKJ9vq21dR4w4aYwe6SSLalbD5Bu9818yfKRrfw5fL32ji-LxEMW45lUkgx1U_UHvueOmX3vMkyUYk7G3vHx0O-Fi2t7j3tSdTywEHXmShMwJEech4aofMlc-gIx1WQPDK46CE2GmtNiFcHY_B40Duj9rkDdQGKCYWWBTrVzEei_0UZqRpW2tqEDgF94A-cjTYqFxdaQSDMRFkTLudJbob4P0mtynkGkZCt0ivjezw68SV0_osGSaXrkAwqyLK2bo-zaZdyVS62KufmwOWU7NVvn6jinltB1eDDkiUD_z7fjjKKerXi6hUVMIZL_ydAj6x9xTABq7pnBrdEg5b-C3eyoJDxQBbeulXDd3RLqFBouATwkx-atZANeangWXR8wAXynDWUipPMJt0G8qh177CEE2Gs5jaj5lUKRCOOiBJX8GGH9qoZ9mKJkjOEq_Lrb4DrYgUDqZ5YZ0WluG_fVJn8MKLTy232tS8g",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "url",
+			"value": "http://127.0.0.1:8000"
+		}
+	]
+}
